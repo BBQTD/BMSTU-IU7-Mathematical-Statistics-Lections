@@ -1,0 +1,62 @@
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english, russian]{babel}	% локализация и переносы
+\usepackage{color} 				 	% цветные буковки
+
+
+
+%%% Математика
+\usepackage{amsmath, amsfonts, amssymb, mathtools} % AMS
+\usepackage{cancel} % \cancel зачеркивание в формулах
+
+
+
+%%% Теоремы, Определения
+\usepackage{amsthm}
+
+\theoremstyle{definition} % "Определение"
+\newtheorem{thm}{Теорема}[section]
+\newtheorem{defn}{Определение}[section]
+\newtheorem{exm}{Пример}[section]
+\newtheorem*{rem}{Замечание}
+\newtheorem*{slv}{Решение}
+
+
+
+%%% Форматирование
+% Выделение + курсив к куску текста
+\newcommand{\bi}[1]{%
+	\textbf{\textit{#1}}%
+}
+
+% Математическое ожидание
+\newcommand{\mx}{%
+	\ensuremath{M\!X}%	
+}
+
+\newcommand{\mxx}{%
+	\ensuremath{M\!X^2}%
+}
+
+% Дисерсия
+\newcommand{\dx}{%
+	\ensuremath{D\!X}%	
+}
+
+
+
+\usepackage{tikz}
+
+
+
+%%% Поля страницы
+\usepackage[top=20mm, bottom=20mm, left=30mm, right=15mm]{geometry}
+
+
+
+%%% Вставка иллюстраций
+\usepackage{graphicx}
+\graphicspath{{img/}}
