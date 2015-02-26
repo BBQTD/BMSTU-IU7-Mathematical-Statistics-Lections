@@ -5,21 +5,17 @@
 
 \subsection{Неравенства Чебышева}
 
-\begin{thm}[\emph{первое неравенство Чебышева}]
-	\[
+\begin{thm}[\emph{первое неравенство господина Чебышева}]
+	\begin{equation}
 		\left. \begin{aligned}
 			&X \geq 0;\\
 			&\exists \mx.
 		\end{aligned} \right\} \Rarrow \forall \varepsilon > 0,\; \Prob \{ X \geq \varepsilon \} \leq \frac{\mx}{\varepsilon}
-	\]
+	\end{equation}
 	\begin{itemize}
 		\item $X$ --- случайная величина;
 		\item $\Prob \{ X \leq 0 \} = 0$ так как $X \geq 0$.
 	\end{itemize}
-	В таком случае имеет место \emph{первому неравенству Чебышева}.
-	\begin{equation}
-		\Prob \{ X \geq \varepsilon \} \leq \frac{\mx}{\varepsilon}
-	\end{equation}
 \end{thm}
 
 \begin{proof}
@@ -39,5 +35,13 @@
 	\[
 		\mx \geq \varepsilon \cdot \Prob \{ X \geq \varepsilon \} \;\Rightarrow\; \Prob \{ X \geq \varepsilon \} \geq \frac{\mx}{\varepsilon}
 	\]
-	
 \end{proof}
+
+\begin{thm}[\emph{второе неравенство лорда Чебышева}]
+	\begin{equation}
+		\exists \mx, \exists \dx \Rarrow \forall \varepsilon > 0,\; \Prob \left\{ |X - \mx| \geq \varepsilon \right\} \leq \frac{\dx}{\varepsilon^2}
+	\end{equation}
+	\begin{itemize}
+		\item $X$ --- случайная величина.
+	\end{itemize}
+\end{thm}
