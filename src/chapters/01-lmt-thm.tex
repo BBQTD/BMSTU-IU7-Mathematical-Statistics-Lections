@@ -1,1 +1,39 @@
 % !TEX root = ../main.tex
+
+\section{Предельные теоремы теории вероятностей}
+
+
+\subsection{Неравенства Чебышева}
+
+\begin{thm}[\emph{первое неравенство Чебышева}] Пусть выполняются следующие условия:
+	\begin{itemize}
+		\item $X$ --- случайная величина;
+		\item $X \geq 0$ т.\,е. $\Prob \{ X \leq 0 \} = 0$;
+		\item $\exists \mx$;
+		\item $\varepsilon > 0$.
+	\end{itemize}
+	В таком случае имеет место \emph{первому неравенству Чебышева}.
+	\begin{equation}
+		\Prob \{ X \geq \varepsilon \} \leq \frac{\mx}{\varepsilon}
+	\end{equation}
+\end{thm}
+
+\begin{proof}
+	Для непрерывной случайное величины $X$
+	\[
+		\mx = \int_{-\infty}^{+\infty} x\, f(x)\, dx =
+	\]
+	так как $X \geq 0$, $f(x) = 0$, $x < 0$
+	\[
+		= \int_{0}^{+\infty} x\, f(x)\, dx = \underbrace{\int_{0}^{\varepsilon} x\, f(x)\, dx}_{\geq 0} + \int_{\varepsilon}^{+\infty} x\, f(x)\, dx \geq \int_{\varepsilon}^{+\infty} a\, f(x)\, dx \geq
+	\]
+	так как $a \geq \varepsilon$
+	\[
+		\geq ... = \varepsilon \cdot \Prob \{ X \geq \varepsilon \}
+	\]
+	таким образом
+	\[
+		\mx \geq \varepsilon \cdot \Prob \{ X \geq \varepsilon \} \;\Rightarrow\; \Prob \{ X \geq \varepsilon \} \geq \frac{\mx}{\varepsilon}
+	\]
+	
+\end{proof}
