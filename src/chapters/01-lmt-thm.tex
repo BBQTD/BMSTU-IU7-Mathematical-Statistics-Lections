@@ -5,12 +5,16 @@
 
 \subsection{Неравенства Чебышева}
 
-\begin{thm}[\emph{первое неравенство Чебышева}] Пусть выполняются следующие условия:
+\begin{thm}[\emph{первое неравенство Чебышева}]
+	\[
+		\left. \begin{aligned}
+			&X \geq 0;\\
+			&\exists \mx.
+		\end{aligned} \right\} \Rarrow \forall \varepsilon > 0,\; \Prob \{ X \geq \varepsilon \} \leq \frac{\mx}{\varepsilon}
+	\]
 	\begin{itemize}
 		\item $X$ --- случайная величина;
-		\item $X \geq 0$ т.\,е. $\Prob \{ X \leq 0 \} = 0$;
-		\item $\exists \mx$;
-		\item $\varepsilon > 0$.
+		\item $\Prob \{ X \leq 0 \} = 0$ так как $X \geq 0$.
 	\end{itemize}
 	В таком случае имеет место \emph{первому неравенству Чебышева}.
 	\begin{equation}
