@@ -39,9 +39,23 @@
 
 \begin{thm}[\emph{второе неравенство лорда Чебышева}]
 	\begin{equation}
-		\exists \mx, \exists \dx \Rarrow \forall \varepsilon > 0,\; \Prob \left\{ |X - \mx| \geq \varepsilon \right\} \leq \frac{\dx}{\varepsilon^2}
+		\exists \mx, \exists \dx \Rarrow \forall \varepsilon > 0,\; \Prob \bigl\{ |X - \mx| \geq \varepsilon \bigr\} \leq \frac{\dx}{\varepsilon^2}
 	\end{equation}
 	\begin{itemize}
 		\item $X$ --- случайная величина.
 	\end{itemize}
 \end{thm}
+
+\begin{proof} Выпишем дисперсию
+	\[
+		\dx = M\bigl[ (X - \mx)^2 \bigr]
+	\]
+	Рассмотрим случайную величину $Y = (X - \mx)^2$, где $Y \geq 0$. Тогда из \emph{первого неравенства Чебышева} следует, что $\forall\delta\geq 0$, $\my\geq\delta\Prob\{ Y\geq\delta \}$, где получается, что $\delta = \varepsilon^2$.
+	\[
+		\Bigl[\dx = M\bigl[ (X - \mx)^2 \bigr]\Bigr] \geq \Bigl[\varepsilon^2\cdot\Prob\bigl\{ (X - \mx)^2\geq\varepsilon^2 \bigr\} = \varepsilon^2\cdot\Prob\bigl\{ |X - \mx|\geq\varepsilon \bigr\}\Bigr]
+	\]
+	таким образом
+	\[
+		\dx \geq \varepsilon^2\cdot\Prob\bigl\{ |X - \mx|\geq\varepsilon \bigr\} \Rarrow \Prob\bigl\{ |X - \mx|\geq\varepsilon \bigr\} \leq \frac{\dx}{\varepsilon^2}
+	\]
+\end{proof}
