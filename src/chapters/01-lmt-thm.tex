@@ -19,21 +19,21 @@
 \end{thm}
 
 \begin{proof}
-	Для непрерывной случайное величины $X$
+	Для непрерывной случайное величины $X$ и зная, что при $X \geq 0 \Rarrow f(x) = 0$, $x < 0$
 	\[
-		\mx = \int_{-\infty}^{+\infty} x\, f(x)\, dx =
+		\mx = \int_{-\infty}^{+\infty} x\, f(x)\, dx = \int_{0}^{+\infty} x\, f(x)\, dx = \underbrace{\int_{0}^{\varepsilon} x\, f(x)\, dx}_{\geq 0} + \int_{\varepsilon}^{+\infty} x\, f(x)\, dx
 	\]
-	так как $X \geq 0$, $f(x) = 0$, $x < 0$
+	учитывая $x \geq \varepsilon$
 	\[
-		= \int_{0}^{+\infty} x\, f(x)\, dx = \underbrace{\int_{0}^{\varepsilon} x\, f(x)\, dx}_{\geq 0} + \int_{\varepsilon}^{+\infty} x\, f(x)\, dx \geq \int_{\varepsilon}^{+\infty} a\, f(x)\, dx \geq
+		\underbrace{\int_{0}^{\varepsilon} x\, f(x)\, dx}_{\geq 0} + \int_{\varepsilon}^{+\infty} x\, f(x)\, dx \geq \int_{\varepsilon}^{+\infty} x\, f(x)\, dx \geq \varepsilon\cdot\int_{\varepsilon}^{+\infty} f(x)\, dx
 	\]
-	так как $a \geq \varepsilon$
+	где
 	\[
-		\geq ... = \varepsilon \cdot \Prob \{ X \geq \varepsilon \}
+		\varepsilon\cdot\int_{\varepsilon}^{+\infty} f(x)\, dx = \varepsilon\cdot\Prob\{ X \geq \varepsilon \}
 	\]
 	таким образом
 	\[
-		\mx \geq \varepsilon \cdot \Prob \{ X \geq \varepsilon \} \;\Rightarrow\; \Prob \{ X \geq \varepsilon \} \geq \frac{\mx}{\varepsilon}
+		\mx \geq \varepsilon \cdot \Prob \{ X \geq \varepsilon \} \;\Rightarrow\; \Prob \{ X \geq \varepsilon \} \leq \frac{\mx}{\varepsilon}
 	\]
 \end{proof}
 
