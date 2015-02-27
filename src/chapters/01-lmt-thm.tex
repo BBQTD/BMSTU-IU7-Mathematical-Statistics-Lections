@@ -136,3 +136,22 @@
 
 
 \subsection{Закон больших чисел (ЗБЧ)}
+
+Будем считать, что 
+\begin{itemize}
+	\item \infseqX --- \emph{последовательность случайных величин};
+	\item $\exists\mx_i = m_i$, где $i = \overline{1, \infty}$.
+\end{itemize}
+
+\begin{defn}
+	Последовательность случайных величин \infseqX удовлетворяет \emph{закону больших чисел}, если 
+	\[\forall\varepsilon > 0,\; \Prob\Biggl\{ \Biggl|\frac{1}{n}\cdot\sum_{i = 1}^{n} X_i - \frac{1}{n}\cdot\sum_{i = 1}^{n} m_i\Biggr| \geq \varepsilon \Biggr\} \xrightarrow[n\to\infty]{} 0\]
+\end{defn}
+
+\begin{rem}
+	Выполнение \emph{закона больших чисел} для последовательности \infseqX означает, что при достаточно больших $n$ величина
+	\[
+		Y_n = \frac{1}{n}\cdot\sum_{i = 1}^{n} X_i - \frac{1}{n}\cdot\sum_{i = 1}^{n} m_i
+	\]
+	практически теряет случайный характер.
+\end{rem}
