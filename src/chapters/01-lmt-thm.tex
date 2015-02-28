@@ -239,3 +239,25 @@
 
 
 \subsection{Центральная предельная теорема (ЦПТ)}
+
+Пусть имеется:
+\begin{itemize}
+	\item последовательность независимых случайных величин \infseqX;
+	\item $X_i$ одинаково распределены;
+	\item $\m{X_i} = m$, $\disp{X_i} = \sigma^2$, $i \in \aleph$
+\end{itemize}
+Составим последовательность: 
+\begin{align*}
+	\overline{X}_n = \frac{1}{n}\sum_{i = 1}^{n} X_i, \quad n \in \aleph; \qquad \m{\overline{X}_n} = m; \qquad \disp{\overline{X}_n} = \frac{1}{n^2}\sum_{i = 1}^{n} \disp{X_i} = \frac{1}{n^2}\sum_{i = 1}^{n} \sigma^2 = \frac{\sigma^2}{n}.
+\end{align*}
+Составим случайную величину $\displaystyle Y = \frac{\overline{X}_n - \m{\overline{X}_n}}{\sqrt{\disp{\overline{X}_n}}} = \frac{1/n \cdot \sum_{i = 1}^{n} X_i - m}{\sigma/\sqrt{n}}$. Тогда $\m{Y_n} = 0$, $\disp{Y_n} = 1$.
+
+\begin{thm}
+	Пусть выполнены условия приведённые выше, тогда последовательность $Y_n$ \emph{слабо сходится} к случайной величине $Z \sim N(0, 1)$ т.\,е.
+	\[
+		\forall x \in \Re, \quad F_{Y_n}(x) \xrightarrow[n\to\infty]{} \Phi(x), \quad \text{где}
+	\]
+	\begin{itemize}
+		\item $\displaystyle \Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{x}e^{- t^2/2}\, dt$
+	\end{itemize}
+\end{thm}
