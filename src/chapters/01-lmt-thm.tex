@@ -166,3 +166,40 @@
 		\]
 	\end{itemize}
 \end{thm}
+
+\begin{proof} 
+	\begin{align*}
+		\overline{X}_n &= \frac{1}{n}\cdot\sum_{i = 1}^{n} X_i \quad n \in N
+		\\
+		\m{\overline{X}_n} &= \frac{1}{n}\cdot\sum_{i = 1}^{n} m_i
+		\\
+		\disp{\overline{X}_n} &= \frac{1}{n^2}\cdot D\biggl(\sum_{i = 1}^{n} X_i\biggr) = \{ X_i \text{ независимы}\} = \frac{1}{n^2}\cdot\sum_{i = 1}^{n} \disp{X_i} = \frac{1}{n^2}\cdot\sum_{i = 1}^{n} \sigma_i^2
+	\end{align*}
+	Используем \emph{второе неравенство Чебышева}
+	\[
+		\Prob \bigl\{ |\overline{X}_n - \m{\overline{X}_n}| \geq \varepsilon \bigr\} \leq \frac{\disp{\overline{X}_n}}{\varepsilon^2}
+	\]
+	В нашем случае
+	\[
+		\Prob \Biggl\{ \Biggl|\frac{1}{n}\cdot\sum_{i = 1}^{n} X_i - \frac{1}{n}\cdot\sum_{i = 1}^{n} m_i\Biggr| \geq \varepsilon\Biggr\} \leq \frac{1}{\varepsilon^2}\cdot\frac{1}{n^2}\cdot\sum_{i = 1}^{n} \sigma_i^2 \leq \frac{1}{\varepsilon^2}\cdot\frac{1}{n^2}\cdot\sum_{i = 1}^{n} C = \frac{1}{\varepsilon^2}\cdot\frac{1}{n^2}\cdot n\,C = \frac{C}{\varepsilon^2\,n}
+	\]
+	таким образом
+	\[
+		0 \leq \Prob \Biggl\{ \Biggl|\frac{1}{n}\cdot\sum_{i = 1}^{n} X_i - \frac{1}{n}\cdot\sum_{i = 1}^{n} m_i\Biggr| \geq \varepsilon\Biggr\} \leq \frac{C}{\varepsilon^2\,n}
+	\]
+	По \emph{теореме о двух милиционерах}
+	\[
+		\Prob \Biggl\{ \Biggl|\frac{1}{n}\cdot\sum_{i = 1}^{n} X_i - \frac{1}{n}\cdot\sum_{i = 1}^{n} m_i\Biggr| \geq \varepsilon\Biggr\} \xrightarrow[n\to\infty]{} 0
+	\]
+\end{proof}
+
+\begin{cor} Пусть
+	\begin{itemize} 
+		\item выполняется теорема о ЗБЧ в форме Чебышева
+		\item $X_i$ одинаково распределены т.\,е. $\m{X_i} = m$, $\disp{X_i} = \sigma^2$, $i \in \aleph$
+	\end{itemize}
+	Тогда 
+	\begin{equation}
+		\Prob\Biggl\{ \biggl| \frac{1}{n} \cdot \sum_{i = 1}^{n} X_i - m \biggr| \geq \varepsilon \Biggr\} \xrightarrow[n\to\infty]{} 0
+	\end{equation}
+\end{cor}
