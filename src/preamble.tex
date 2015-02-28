@@ -23,6 +23,7 @@
 \newtheorem{exm}{Пример}[section]
 \newtheorem*{rem}{Замечание}
 \newtheorem*{slv}{Решение}
+\newtheorem*{cor}{Следствие}
 
 
 
@@ -30,6 +31,10 @@
 % Выделение + курсив к куску текста
 \newcommand{\bi}[1]{%
 	\textbf{\textit{#1}}}
+
+% Математическое ожидание
+\newcommand{\m}[1]{%
+	\ensuremath{M\!#1}}
 
 % Математическое ожидание X
 \newcommand{\mx}{%
@@ -44,6 +49,10 @@
 
 \newcommand{\myy}{%
 	\ensuremath{M\!Y^2}}
+
+% Дисперсия
+\newcommand{\disp}[1]{%
+	\ensuremath{D\!#1}}
 
 % Дисперсия X
 \newcommand{\dx}{%
