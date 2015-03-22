@@ -1,7 +1,7 @@
 %%% Работа с русским языком
 \usepackage{cmap}					% поиск в PDF
 \usepackage{mathtext} 				% русские буквы в формулах
-\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[T2A, TS1]{fontenc}			% кодировка
 \usepackage[utf8]{inputenc}			% кодировка исходного текста
 \usepackage[english, russian]{babel}	% локализация и переносы
 \usepackage{color} 				 	% цветные буковки
@@ -15,6 +15,13 @@
 %%% Математика
 \usepackage{amsmath, amsfonts, amssymb, mathtools} % AMS
 \usepackage{cancel} % \cancel зачеркивание в формулах
+\usepackage{xfrac}
+\usepackage{array}
+
+
+
+\newcommand{\vvec}[1]{%
+	\ensuremath{\overrightarrow{#1}}}
 
 
 
